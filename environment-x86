@@ -1,0 +1,11 @@
+#!/bin/sh
+
+export PROCESSOR="x86"
+export CIBLE=$(pwd)"/out/"$PROCESSOR
+if [ ! -d "$CIBLE" ]; then
+	echo "CREATION DE $CIBLE"
+	mkdir -p "$CIBLE"
+fi
+
+export CFLAGS=" -O2 -Wall -Wextra -pipe "
+export LDFLAGS=""
